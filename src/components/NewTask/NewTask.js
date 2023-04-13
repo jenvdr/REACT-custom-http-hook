@@ -3,7 +3,6 @@ import TaskForm from './TaskForm';
 import useHTTP from '../../hooks/use-http';
 
 const NewTask = (props) => {
-
   const {isLoading, error, sendRequest: postData} = useHTTP();
 
   const transformData = ((taskText, data) => {
@@ -14,7 +13,6 @@ const NewTask = (props) => {
   });
 
   const enterTaskHandler = async (taskText) => {
-
     postData({
       url: 'https://custom-http-hook-f524f-default-rtdb.europe-west1.firebasedatabase.app/tasks.json',
       method: 'POST',
